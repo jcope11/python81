@@ -12,5 +12,7 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+num = str(3)
+print("100".rjust(10))
+print(num.rjust(10))
+print("copeland".title().rjust(10))

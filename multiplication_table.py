@@ -1,3 +1,4 @@
+# !/usr/bin/python3
 # Multiplication table
 
 # Print the horizontal number labels:
