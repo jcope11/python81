@@ -1,8 +1,6 @@
 #! /usr/bin/python3
 # Decimal, Hex, and Binary Number Converter
 
-from termcolor import colored  # Must import termcolor module and install in same directory
-
 print("Decimal - Hex - Binary Converter\nby Joe Copeland\n")
 
 while True:
@@ -25,10 +23,15 @@ while True:
     print("Please enter a number.")
 amount = int(response)
 
+# Print colorful table using ANSI color codes
+color_white = '\033[0m'
+color_green = '\033[92m'
+color_yellow = '\033[93m'
+color_blue = '\033[94m'
+
 for number in range(start, start + amount):  # Main program loop.
     # Convert to hex/binary and remove the prefix 0b and 0x
-    hexNumber = hex(number)[2:].upper()
-    binNumber = bin(number)[2:]
-
-# Print table in color with colored function.  eg colored("text", 'green')
-    print('Dec:', colored(number,'green'),'   Hex:', colored(hexNumber,'green'), '   Bin:', colored(binNumber, 'green'))
+    hexNumber = str(hex(number)[2:].upper())
+    binNumber = str(bin(number)[2:])
+    number = str(number)
+    print('Dec:', color_green + number + color_white, '   Hex:', color_yellow + hexNumber + color_white, '   Bin:', color_blue + binNumber + color_white)
