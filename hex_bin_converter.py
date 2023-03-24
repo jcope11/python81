@@ -34,4 +34,6 @@ for number in range(start, start + amount):  # Main program loop.
     hexNumber = str(hex(number)[2:].upper())
     binNumber = str(bin(number)[2:])
     number = str(number)
-    print('Dec:', color_green + number + color_white, '   Hex:', color_yellow + hexNumber + color_white, '   Bin:', color_blue + binNumber + color_white)
+    print('Dec:', color_green + number.ljust(3) + color_white,
+          '   Hex:', color_blue + hexNumber.ljust(2) + color_white,
+          '   Bin:', color_yellow + binNumber + color_white)
